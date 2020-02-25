@@ -1,5 +1,5 @@
 
 
-public class Vector<E>{
+public class Vector<E> extends aStack<E>{
 	
 }

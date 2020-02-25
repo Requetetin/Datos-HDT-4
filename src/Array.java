@@ -1,5 +1,5 @@
 
 
-public class Array<E>{
+public class Array<E> extends aStack<E>{
 	
 }

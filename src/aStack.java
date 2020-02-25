@@ -1,5 +1,5 @@
 
 
-public abstract class aStack<E>{
+public abstract class aStack<E> implements iStack<E>{
 	
 }
