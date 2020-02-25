@@ -1,6 +1,6 @@
 
 
-public absract class aList<E> implements iList<E>{
+public abstract class aList<E> implements iList<E>{
 
    public aList()
    // post: does nothing

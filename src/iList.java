@@ -1,6 +1,6 @@
 
 
-interface iList{
+interface iList<E>{
 	public int size();
    // post: returns number of elements in list
 

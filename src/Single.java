@@ -16,7 +16,7 @@ public class Single<E> extends aList<E>{
   {
     return count;
   }
-  
+
   public void addFirst(E value)
   // post: value is added to beginning of list
   {
@@ -25,24 +25,24 @@ public class Single<E> extends aList<E>{
      head = new Node<E>(value, head);
      count++;
   }
-  
+
   public E removeFirst()
   // pre: list is not empty
   // post: removes and returns value from beginning of list
- {
+  {
      Node<E> temp = head;
      head = head.next(); // move head down list
      count--;
      return temp.value();
   }
-  
+
   public E getFirst()
   // pre: list is not empty
   // post: returns first value in list
   {
       return head.value();
   }
-  
+
   public void addLast(E value)
   // post: adds value to end of list
   {
@@ -56,12 +56,12 @@ public class Single<E> extends aList<E>{
          {
                 finger = finger.next();
          }
-		 
+  	 
          finger.setNext(temp);
       } else head = temp;
-	  
-	  count++;
-	  
+    
+    count++;
+    
    }
    
    
@@ -70,11 +70,12 @@ public class Single<E> extends aList<E>{
    // post: returns true iff value is found in list
   {
       Node<E> finger = head;
-	  
+    
       while (finger != null &&
              !finger.value().equals(value))
      {
           finger = finger.next();
       }
       return finger != null;
+  }
 }

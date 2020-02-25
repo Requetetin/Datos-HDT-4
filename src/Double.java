@@ -5,7 +5,7 @@ public class Double<E> extends aList<E>{
 	protected dNode<E> head;
 	protected dNode<E> tail;
 
-	public Dobule()
+	public Double()
 	// post: constructs an empty list
 	{
 	   head = null;
