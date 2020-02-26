@@ -1,4 +1,4 @@
-import java.util.*ñ
+import java.util.*;
 
 interface iList<E>{
 

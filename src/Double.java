@@ -2,8 +2,8 @@
 
 public class Double<E> extends aList<E>{
 	protected int count;
-	protected dNode<E> head;
-	protected dNode<E> tail;
+	protected DoublyLinkedNode<E> head;
+	protected DoublyLinkedNode<E> tail;
 
 	public Double()
 	// post: constructs an empty list
@@ -13,24 +13,27 @@ public class Double<E> extends aList<E>{
 	   count = 0;
 	}
 
+	public int size(){
+		return count;
+	}
 
-	public void push(E value)
+	public void addLast(E value)
 	// pre: value is not null
 	// post: adds new value to tail of list
 	{
 	   // construct new element
-	   tail = new dNode<E>(value, null, tail);
+	   tail = new DoublyLinkedNode<E>(value, null, tail);
 	   // fix up head
 	   if (head == null) head = tail;
 	   count++;
 	}
 
 
-	public E pop()
+	public E removeLast()
 	// pre: list is not empty
 	// post: removes value from tail of list
 	{
-	   dNode<E> temp = tail;
+	   DoublyLinkedNode<E> temp = tail;
 	   tail = tail.previous();
 	   if (tail == null) {
 	       head = null;
@@ -39,6 +42,21 @@ public class Double<E> extends aList<E>{
 	   }
 	   count--;
 	   return temp.value();
+	}
+
+	public E getLast(){
+		return tail.value();
+	}
+
+
+	public void push(E item){
+		addLast(item);
+	}
+	public E pop(){
+		return removeLast();
+	}
+	public E peek(){
+		return getLast();
 	}
 	
 }
