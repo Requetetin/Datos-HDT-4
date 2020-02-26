@@ -1,4 +1,4 @@
-
+import java.util.Iterator;
 
 interface iList<E>{
 	public int size();

@@ -1,4 +1,4 @@
-
+import java.util.Iterator;
 
 public class Single<E> extends aList<E>{
 	protected int count; // list size
@@ -78,4 +78,88 @@ public class Single<E> extends aList<E>{
       }
       return finger != null;
   }
+
+@Override
+public void clear() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public E getLast() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public E removeLast() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public E remove(E value) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public void add(E value) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public E remove() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public E get() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public int indexOf(E value) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+@Override
+public int lastIndexOf(E value) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+@Override
+public E get(int i) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public E set(int i, E o) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public void add(int i, E o) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public E remove(int i) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public Iterator<E> iterator() {
+	// TODO Auto-generated method stub
+	return null;
+}
 }
