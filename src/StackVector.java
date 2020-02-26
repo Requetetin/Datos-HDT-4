@@ -48,4 +48,11 @@ public class StackVector<E> implements iStack<E> {
 	}
 
 
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 }
