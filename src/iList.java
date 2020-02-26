@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import java.util.*;
+=======
+import java.util.Iterator;
+>>>>>>> 1c76c6a2e9661c40a74778f9b6097611618ec17f
 
 interface iList<E>{
 

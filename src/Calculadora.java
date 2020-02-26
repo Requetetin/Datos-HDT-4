@@ -1,3 +1,4 @@
+
 /**
  * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
  * @date 05/02/2020
@@ -5,7 +6,7 @@
  */
 
 public class Calculadora implements iCalculadora{
-	
+
 
 	/**
 	 * @return suma, resultado de la suma
