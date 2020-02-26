@@ -1,22 +1,17 @@
 
 
-public abstract class aList<E> implements iList<E>{
+public abstract class aList<E> implements iList<E>, iStack<E>{
 
    public aList()
    // post: does nothing
    {
    }
 
-   public boolean isEmpty()
+   public boolean empty() //Lo implementa de StackTraceElement
    // post: returns true iff list has no elements
    {
       return size() == 0;
    }
   
-  public boolean contains(E value)
-  // pre: value is not null
-  // post: returns true iff list contains an object equal to value
-  {
-	return -1 != indexOf(value);
-  }
+  
 }

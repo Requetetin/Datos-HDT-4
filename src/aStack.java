@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public abstract class aStack<E> implements iStack<E>{
-	
+
 protected ArrayList<E> lista;
 	
 
