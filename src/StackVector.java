@@ -34,17 +34,17 @@ public class StackVector<E> implements iStack<E> {
 	}
 
 	
-	public int search(E elemento) {
+	public int search(E item) {
 		
-	return stack.indexOf(elemento);
+	return stack.indexOf(item);
 		
 		
 	}
 
 
 	
-	public void  push (E elemento) {
-		stack.add(elemento);
+	public void  push (E item) {
+		stack.add(item);
 	}
 
 
