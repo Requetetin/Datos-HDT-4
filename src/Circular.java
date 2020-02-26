@@ -1,8 +1,10 @@
-
+import java.util.*;
 
 public class Circular<E> extends aList<E>{
 	protected Node<E> tail; 
 	protected int count;
+	protected LinkedList<E> list;
+	
 
 	public Circular()
 	// pre: constructs a new circular list
@@ -11,20 +13,6 @@ public class Circular<E> extends aList<E>{
 	   count = 0;
 	}
 
-	public void addFirst(E value)
-	// pre: value non-null
-	// post: adds element to head of list
-	{
-	   Node<E> temp = new Node<E>(value);
-	   if (tail == null) { // first value added
-	       tail = temp;
-	       tail.setNext(tail);
-	   } else { // element exists in list
-	       temp.setNext(tail.next());
-	       tail.setNext(temp);
-	   }
-	   count++;
-	}
 
 
 	public void addLast(E value)
@@ -34,6 +22,10 @@ public class Circular<E> extends aList<E>{
 	   // new entry:
 	   addFirst(value);
 	   tail = tail.next();
+	}
+
+	public void addFirst(E value){
+
 	}
 
 
@@ -59,4 +51,7 @@ public class Circular<E> extends aList<E>{
 	   count--;
 	   return temp.value();
 	}
+
+   
+
 }

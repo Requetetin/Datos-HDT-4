@@ -5,7 +5,7 @@
  */
 
 public class Calculadora implements iCalculadora{
-	iStack stack = new Stack();
+	
 
 	/**
 	 * @return suma, resultado de la suma

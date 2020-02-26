@@ -14,19 +14,7 @@ public class Double<E> extends aList<E>{
 	}
 
 
-	public void addFirst(E value)
-	// pre: value is not null
-	// post: adds element to head of list
-	{
-	   // construct a new element, making it head
-	   head = new dNode<E>(value, head, null);
-	   // fix tail, if necessary
-	   if (tail == null) tail = head;
-	   count++;
-	}
-
-
-	public void addLast(E value)
+	public void push(E value)
 	// pre: value is not null
 	// post: adds new value to tail of list
 	{
@@ -38,7 +26,7 @@ public class Double<E> extends aList<E>{
 	}
 
 
-	public E removeLast()
+	public E pop()
 	// pre: list is not empty
 	// post: removes value from tail of list
 	{
