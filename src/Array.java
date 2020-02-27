@@ -4,7 +4,7 @@
  * Hoja de trabajo 2
  */
 
-//Extraido de 
+
 import java.util.*;
 
 public class Array<E> extends aStack<E>{

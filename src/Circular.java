@@ -4,7 +4,7 @@
  * Hoja de trabajo 2
  */
 
-//Extraido de 
+//Extraido de: https://uvg.instructure.com/courses/13715/pages/listas-circulares?module_item_id=195297 
 import java.util.*;
 
 public class Circular<E> extends aList<E>{
