@@ -4,6 +4,8 @@
  * Hoja de trabajo 2
  */
 
+//Extraido de: https://uvg.instructure.com/courses/13715/pages/singly-linked-list?module_item_id=195289
+
 public class Node<E>
 {
    protected E data; // value stored in this element

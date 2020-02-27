@@ -4,7 +4,7 @@
  * Hoja de trabajo 2
  */
 
-//Esta se llama diferente la douglas, habria que ver vien lo del nombre
+//Extraido de: https://uvg.instructure.com/courses/13715/pages/doubly-linked-list?module_item_id=195293
 
 public class DoublyLinkedNode<E>{
 	protected E data;
