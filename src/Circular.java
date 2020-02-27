@@ -3,7 +3,7 @@ import java.util.*;
 public class Circular<E> extends aList<E>{
 	protected Node<E> tail; 
 	protected int count;
-	protected LinkedList<E> list;
+
 	
 
 	public Circular()
@@ -13,6 +13,10 @@ public class Circular<E> extends aList<E>{
 	   count = 0;
 	}
 
+
+	public int size(){
+		return count;
+	}
 
 
 	public void addLast(E value)
@@ -25,11 +29,20 @@ public class Circular<E> extends aList<E>{
 	}
 
 	public void addFirst(E value){
+		Node<E> temp = new Node<E>(value);
 
+		if(tail != null){
+			temp.setNext(tail.next());
+			tail.setNext(temp);
+		}else{
+			tail = temp;
+			tail.setNext(tail);
+		}
+		count ++;
 	}
 
 
-	// lo dificil es quitar el elemento de la cola
+	 	
 
 	public E removeLast()
 	// pre: !isEmpty()
@@ -51,6 +64,24 @@ public class Circular<E> extends aList<E>{
 	   count--;
 	   return temp.value();
 	}
+
+	public E getLast(){
+		return tail.value();
+	}
+
+
+
+	public void push(E item){
+		addLast(item);
+	}
+	public E pop(){
+		return removeLast();
+	}
+	public E peek(){
+		return getLast();
+	}
+	
+
 
    
 

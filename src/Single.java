@@ -1,8 +1,10 @@
-import java.util.Iterator;
+import java.util.*;
+
 
 public class Single<E> extends aList<E>{
 	protected int count; // list size
    protected Node<E> head; // ref. to first element
+   
 
    public Single()
    // post: generates an empty list
@@ -63,103 +65,39 @@ public class Single<E> extends aList<E>{
     count++;
     
    }
-   
-   
-   public boolean contains(E value)
-   // pre: value is not null
-   // post: returns true iff value is found in list
-  {
-      Node<E> finger = head;
-    
-      while (finger != null &&
-             !finger.value().equals(value))
-     {
-          finger = finger.next();
+
+   public E removeLast(){
+      if(head == null){
+        return null;
       }
-      return finger != null;
+      if(head.next() == null){
+        return null;
+      }
+
+      Node<E> temp = head;
+      while(temp.next().next() !=null) temp = temp.next();
+      
+      temp.setNext(null);
+      count --;
+      return head.value();
+   }
+
+   public E getLast(){
+      return head.value();
+   }
+   
+   
+
+
+  public void push(E item){
+    addLast(item);
+  }
+  public E pop(){
+    return removeLast();
+  }
+  public E peek(){
+    return getLast();
   }
 
-@Override
-public void clear() {
-	// TODO Auto-generated method stub
-	
-}
 
-@Override
-public E getLast() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public E removeLast() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public E remove(E value) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public void add(E value) {
-	// TODO Auto-generated method stub
-	
-}
-
-@Override
-public E remove() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public E get() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public int indexOf(E value) {
-	// TODO Auto-generated method stub
-	return 0;
-}
-
-@Override
-public int lastIndexOf(E value) {
-	// TODO Auto-generated method stub
-	return 0;
-}
-
-@Override
-public E get(int i) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public E set(int i, E o) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public void add(int i, E o) {
-	// TODO Auto-generated method stub
-	
-}
-
-@Override
-public E remove(int i) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public Iterator<E> iterator() {
-	// TODO Auto-generated method stub
-	return null;
-}
 }
