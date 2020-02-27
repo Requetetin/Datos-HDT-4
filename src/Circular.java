@@ -1,3 +1,10 @@
+/**
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
+
+//Extraido de 
 import java.util.*;
 
 public class Circular<E> extends aList<E>{
@@ -6,6 +13,9 @@ public class Circular<E> extends aList<E>{
 
 	
 
+	/**
+	 * Constructor
+	 */
 	public Circular()
 	// pre: constructs a new circular list
 	{
@@ -14,11 +24,17 @@ public class Circular<E> extends aList<E>{
 	}
 
 
+	/**
+	 * Tamaño
+	 */
 	public int size(){
 		return count;
 	}
 
 
+	/**
+	 * agrega un elemento a la cola de la lista
+	 */
 	public void addLast(E value)
 	// pre: value non-null
 	// post: adds element to tail of list
@@ -28,6 +44,10 @@ public class Circular<E> extends aList<E>{
 	   tail = tail.next();
 	}
 
+	/**
+	 * Agrega un elemento al inicio de la lista
+	 * @param value
+	 */
 	public void addFirst(E value){
 		Node<E> temp = new Node<E>(value);
 
@@ -44,6 +64,9 @@ public class Circular<E> extends aList<E>{
 
 	 	
 
+	/**
+	 * Reueve el elemento al final de la cola y devuelve el valor
+	 */
 	public E removeLast()
 	// pre: !isEmpty()
 	// post: returns and removes value from tail of list
@@ -65,18 +88,30 @@ public class Circular<E> extends aList<E>{
 	   return temp.value();
 	}
 
+	/**
+	 * Devuelve el ultimo elemento de la cola
+	 */
 	public E getLast(){
 		return tail.value();
 	}
 
-
-
+	/**
+	 * Agrega un elemento a la cola
+	 */
 	public void push(E item){
 		addLast(item);
 	}
+	
+	/**
+	 * remueve el ultimo elemento de la cola
+	 */
 	public E pop(){
 		return removeLast();
 	}
+	
+	/**
+	 * devuelve el ultimo elemento
+	 */
 	public E peek(){
 		return getLast();
 	}

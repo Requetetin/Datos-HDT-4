@@ -1,4 +1,8 @@
-
+/**
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
 
 public class Factory{
 	public iStack getType(int option) {
@@ -23,6 +27,6 @@ public class Factory{
 			return new Circular();
 		}
 		else
-			return null;
+			return new Array();
 	}
 }

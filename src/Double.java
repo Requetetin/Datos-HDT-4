@@ -1,10 +1,19 @@
+/**
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
 
+//Extraido de
 
 public class Double<E> extends aList<E>{
 	protected int count;
 	protected DoublyLinkedNode<E> head;
 	protected DoublyLinkedNode<E> tail;
 
+	/**
+	 * Constructor
+	 */
 	public Double()
 	// post: constructs an empty list
 	{
@@ -13,10 +22,16 @@ public class Double<E> extends aList<E>{
 	   count = 0;
 	}
 
+	/**
+	 * Devuelve el tamanio
+	 */
 	public int size(){
 		return count;
 	}
 
+	/**
+	 * Agrega un valor al final de la cola de la lista
+	 */
 	public void addLast(E value)
 	// pre: value is not null
 	// post: adds new value to tail of list
@@ -29,6 +44,9 @@ public class Double<E> extends aList<E>{
 	}
 
 
+	/**
+	 * Remueve el elemento final de la lista
+	 */
 	public E removeLast()
 	// pre: list is not empty
 	// post: removes value from tail of list
@@ -44,17 +62,28 @@ public class Double<E> extends aList<E>{
 	   return temp.value();
 	}
 
+	/**
+	 * Devuelve el ultimo de la lista
+	 */
 	public E getLast(){
 		return tail.value();
 	}
 
-
+/**
+ * Agrega un elemento al final de la lista
+ */
 	public void push(E item){
 		addLast(item);
 	}
+	/**
+	 * Remueve el ultimo elemento de la lista
+	 */
 	public E pop(){
 		return removeLast();
 	}
+	/**
+	 * devuelve el ultimo elemento de la lista
+	 */
 	public E peek(){
 		return getLast();
 	}

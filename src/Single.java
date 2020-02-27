@@ -1,3 +1,9 @@
+/**
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
+
 import java.util.*;
 
 
@@ -6,19 +12,28 @@ public class Single<E> extends aList<E>{
    protected Node<E> head; // ref. to first element
    
 
+   /**
+    * Generar una lista vacia
+    */
    public Single()
-   // post: generates an empty list
    {
       head = null;
       count = 0;
    }
    
+   /**
+    * @return count
+    * devuelve el numero de elementos en la lista
+    */
    public int size()
-   // post: returns number of elements in list
   {
     return count;
   }
 
+   /**
+    * Anadir primero
+    * @param value
+    */
   public void addFirst(E value)
   // post: value is added to beginning of list
   {
@@ -28,6 +43,10 @@ public class Single<E> extends aList<E>{
      count++;
   }
 
+  /**
+   * remueve y devuelve el primer valor del inicio de una lista
+   * @return valor
+   */
   public E removeFirst()
   // pre: list is not empty
   // post: removes and returns value from beginning of list
@@ -38,6 +57,10 @@ public class Single<E> extends aList<E>{
      return temp.value();
   }
 
+  /**
+   * Devueve primer valor de una lista
+   * @return
+   */
   public E getFirst()
   // pre: list is not empty
   // post: returns first value in list
@@ -45,6 +68,9 @@ public class Single<E> extends aList<E>{
       return head.value();
   }
 
+  /**
+   * anade un valor al final de una lista
+   */
   public void addLast(E value)
   // post: adds value to end of list
   {
@@ -66,6 +92,9 @@ public class Single<E> extends aList<E>{
     
    }
 
+  /**
+   * Remueve un valr al final de una lista
+   */
    public E removeLast(){
       if(head == null){
         return null;
@@ -82,19 +111,28 @@ public class Single<E> extends aList<E>{
       return head.value();
    }
 
+   /**
+    * Devuelve el ultimo valor
+    */
    public E getLast(){
       return head.value();
    }
    
-   
-
-
+/**
+ * Hace push a la lista
+ */
   public void push(E item){
     addLast(item);
   }
+  /**
+   * Hace pop a la lista
+   */
   public E pop(){
     return removeLast();
   }
+  /**
+   * Hace peek a la lista
+   */
   public E peek(){
     return getLast();
   }
