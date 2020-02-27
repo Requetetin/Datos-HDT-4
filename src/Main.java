@@ -28,10 +28,32 @@ public class Main{
 		File archive = new File("datos.txt");//Busca el archivo llamado datos, y si existe, opera.
 		if(archive.exists()){
 			Scanner data = new Scanner(archive);
+			Scanner readI = new Scanner(System.in);
 			String all = data.nextLine();
 			System.out.println(all);
+			boolean flag = true;
+			while (flag) {
+				System.out.println("¿De que forma desea realizar su operacion?\n1. ArrayList\n2. Vector\n3. Lista simplemente encadenada\n4. Lista doblemente encadenada\n5. Lista circular\n6. Salir");
+				String op = readI.nextLine();
+				try {
+					int option = Integer.parseInt(op);
+					if(option<1 || option>6) {
+						throw new Exception();
+					}
+					else if (option == 6) {
+						flag = false;
+					}
+					
+				}
+				catch(Exception E) {
+					System.out.println("\nNo ha escogido una opcion valida, intentelo de nuevo por favor\n");
+					
+				}
+			}
+		
+			
 			String[] separated = all.split(" ");//Separa el String por espacios
-			for(int i=0; i<separated.length;i++){
+			/*for(int i=0; i<separated.length;i++){
 				try{
 					int a = Integer.parseInt(separated[i]);
 					stack.push(a);
@@ -64,17 +86,17 @@ public class Main{
 					}
 						
 				}
-			}
+			}*/
 		}
 
 		else{
 			System.out.println("No hay datos en el archivo");
 		}
-		if(stack.peek().equals(11111111)||stack.peek().equals(-111111)) {
+		/*if(stack.peek().equals(11111111)||stack.peek().equals(-111111)) {
 			System.out.println("Vuelva a intentarlo");
-		}
-		else 
-			System.out.println("Este es su resultado: "+stack.peek());
+		}*/
+		/*else 
+			System.out.println("Este es su resultado: "+stack.peek());*/
 	
 	}
 }
