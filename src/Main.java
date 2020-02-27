@@ -1,7 +1,7 @@
 /**
  * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
  * @date 05/02/2020
- * Hoja de trabajo 2
+ * Hoja de trabajo 4
  */
 
 import java.io.File;
@@ -17,13 +17,14 @@ public class Main{
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) throws Exception{
 		Factory factory = new Factory();
+		Singlenton single = new Singlenton();
 		
 		System.out.println("------------------");
 		System.out.println("|   Bienvenido   |");
 		System.out.println("------------------");
 		System.out.println("Desea realizar una operacion con lo siguiente: ");
 
-		iCalculadora calc = new Calculadora(); 
+		iCalculadora calc = single.getInstancia(); 
 		
 
 		File archive = new File("datos.txt");//Busca el archivo llamado datos, y si existe, opera.
