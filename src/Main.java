@@ -23,8 +23,8 @@ public class Main{
 		System.out.println("------------------");
 		System.out.println("Desea realizar una operacion con lo siguiente: ");
 
-		iCalculadora calc = new Calculadora(); //ESTO SE HACE EN EL SINGLENTON
-		//iStack<Integer> stack = new Array<Integer>();  //ESTE SE CREA AHORA EN EL FACTORY
+		iCalculadora calc = new Calculadora(); 
+		
 
 		File archive = new File("datos.txt");//Busca el archivo llamado datos, y si existe, opera.
 		if(archive.exists()){
