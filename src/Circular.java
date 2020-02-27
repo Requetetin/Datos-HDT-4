@@ -29,11 +29,20 @@ public class Circular<E> extends aList<E>{
 	}
 
 	public void addFirst(E value){
+		Node<E> temp = new Node<E>(value);
 
+		if(tail != null){
+			temp.setNext(tail.next());
+			tail.setNext(temp);
+		}else{
+			tail = temp;
+			tail.setNext(tail);
+		}
+		count ++;
 	}
 
 
-	// lo dificil es quitar el elemento de la cola
+	 	
 
 	public E removeLast()
 	// pre: !isEmpty()
