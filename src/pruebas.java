@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 class pruebas {
 
-	Calculadora calcu = new Calculadora();
+	Array array = new Array();
 	@Test
 	void test() {
-		int resultado = calcu.dividir(20, 5);
-		int esperado = 4;
+		int resultado = array.size();
+		int esperado = 0;
 		assertEquals(esperado,resultado);
 	}
 
