@@ -47,7 +47,7 @@ public class Main{
 				}
 				catch(Exception E) {
 					System.out.println("\nNo ha escogido una opcion valida, intentelo de nuevo por favor\n");
-					
+					  
 				}
 			}
 		
